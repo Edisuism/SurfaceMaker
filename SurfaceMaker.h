@@ -3,6 +3,9 @@
 
 #include <string>
 
+#include <vector>
+#include "amlVec.h"
+
 class cycleUtils;
 
 class SurfaceMaker {
@@ -11,6 +14,7 @@ public:
     ~SurfaceMaker();
 
     void OnOpenCurveFile(const std::string& filename);
+    void OnOpenCurveNetwork(const std::vector<std::vector<AML::double3>>& curveNetwork);
     void OnSaveMesh();
     void ConstructSurface(const std::string& filename);
 
